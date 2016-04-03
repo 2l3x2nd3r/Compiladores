@@ -25,10 +25,10 @@ int main(void){
 
   while(ntoken){
     printf("%s", nombres[ntoken]);
-    fprintf(archivo, nombres[ntoken]);
+    fprintf(archivo, "%s", nombres[ntoken]);
     if(ntoken != 3 && ntoken != 10 && ntoken != 20 && ntoken != 21 && ntoken != 22){
       printf("%s", yytext);
-      fprintf(archivo, yytext);
+      fprintf(archivo, "%s", yytext);
     }
     if(ntoken == 2 || ntoken == 6){
       fprintf(archivo, "\n");
