@@ -49,7 +49,7 @@
 [a-zA-Z][a-zA-Z0-9]*                  return ID;
 [0-9][0-9]*                           return CTE_ENTERO;
 [0-9]+(.[0-9]+)?(e(\+|-)?[0-9]+)?     return CTE_REAL;
-[\S\s]*                               return CTE_CADENA;
+\"(\\.|[^"])*\"                       return CTE_CADENA;
 
 %%
 

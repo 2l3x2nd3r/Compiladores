@@ -12,7 +12,7 @@ char *nombres[] = {NULL, " Id= ", " Punto-coma= ", " VOID", " Parent-a= ", " Par
                         " Cte-cadena= ", " INT", " FLOAT", " CHAR", " Menor-igual= ", 
                         " Mayor-igual= ", " Menor= ", " Mayor= ", " Difente= ", " Op-asign= ", 
                         " Comparacion= ", " Op-y= ", " Op-o= ", " Op-no= ", " Si= ", " Sino= ", 
-                        " Para= ", " Mientras-que= ", " Haga-hasta= ", " Dependiendo-de= ", 
+                        "Sino-si= ", " Para= ", " Mientras-que= ", " Haga-hasta= ", " Dependiendo-de= ", 
                         " Caso= "};
 
 int main(void){
