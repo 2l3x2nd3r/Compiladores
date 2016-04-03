@@ -1,5 +1,5 @@
 %{
-  #include "LAB01_castro_mayor_taborda.h"
+  #include "Tokens.h"
 %}
 
 %%
@@ -25,11 +25,11 @@
 "float"                               return TIPO_FLOAT;
 "char"                                return TIPO_CHAR;
 
-"<="                                  return IGUAL;
-">="                                  return IGUAL_IGUAL;
-"<"                                   return IGUAL;
-">"                                   return IGUAL_IGUAL;
-"<>"                                  return IGUAL;
+"<="                                  return MENOR_IGUAL;
+">="                                  return MAYOR_IGUAL;
+"<"                                   return MENOR;
+">"                                   return MAYOR;
+"<>"                                  return DIFERENTE;
 "="                                   return IGUAL;
 "=="                                  return IGUAL_IGUAL;
 
@@ -49,7 +49,7 @@
 [a-zA-Z][a-zA-Z0-9]*                  return ID;
 [0-9][0-9]*                           return CTE_ENTERO;
 [0-9]+(.[0-9]+)?(e(\+|-)?[0-9]+)?     return CTE_REAL;
-'"[\S\s]*"'                           return CTE_CADENA;
+[\S\s]*                               return CTE_CADENA;
 
 %%
 
