@@ -17,9 +17,13 @@ char *nombres[] = {NULL, " Id= ", " Punto-coma= ", " VOID", " Parent-a= ", " Par
 
 int main(void){
 
-  int ntoken;
+  int ntoken, i;
+  
+  i = 1;
 
   ntoken = yylex();
+
+  char *ids[] = {NULL}
 
   FILE *archivo = fopen("salida.txt", "w");
 
@@ -33,9 +37,16 @@ int main(void){
     if(ntoken == 2 || ntoken == 6){
       fprintf(archivo, "\n");
     }
+    if(ntoken == 1){
+      id = [ntoken] + yytext;
+      ids[i] = id;
+    }
     ntoken = yylex();
   }
   printf("%s\n", "");
+
+
   fclose(archivo);
+
   return 0;
 }
